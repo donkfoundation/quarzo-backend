@@ -49,4 +49,10 @@ class User {
         return $result;
         //Resultado de la consulta se tiene que retornar
     }
+
+    public function searchUser($user, $password) {
+        $database = new DataBase();
+        $result = $database->executeQuery("SELECT user_id from user where user=$user AND password=$password");
+        return $result->fetch_assoc();
+    }
 }
