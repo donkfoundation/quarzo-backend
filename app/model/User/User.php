@@ -1,5 +1,7 @@
 <?php
-require_once '../connection/DataBase.php';
+
+//mi ruta absoluta PERSONAL (cambiar)
+require_once 'C:/xampp/htdocs/quarzo-backend/app/connection/DataBase.php';
 
 class User {
     private $id;
@@ -41,10 +43,10 @@ class User {
     }
 
     //Función para obtener los datos de un usuario en concreto
-    public function registerUser($user, $email ,$password){
+    public function registerUser($user, $email, $password){
         $database = new DataBase(); //Ponen los datos de la base de datos
-        $database->executeQuery("Consulta");
-
+        $result = $database->executeQuery("INSERT INTO user(user, email, password) VALUES($user, $email, $password)");
+        return $result;
         //Resultado de la consulta se tiene que retornar
     }
 }

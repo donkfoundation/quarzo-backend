@@ -5,7 +5,9 @@ if (isset($_GET['controller'])) {
     $controllerName = $_GET['controller'];
 
     // Verificar si el archivo del controlador existe
-    $controllerFile = "controller/$controllerName.php";
+
+    //mi ruta absoluta PERSONAL (cambiar)
+    $controllerFile = "C:/xampp/htdocs/quarzo-backend/app/controller/$controllerName/$controllerName.php";
     if (file_exists($controllerFile)) {
         // Incluir el archivo del controlador
         require_once($controllerFile);
