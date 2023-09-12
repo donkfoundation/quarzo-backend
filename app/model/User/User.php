@@ -1,4 +1,5 @@
 <?php
+require_once '../connection/DataBase.php';
 
 class User {
     private $id;
@@ -40,5 +41,10 @@ class User {
     }
 
     //Función para obtener los datos de un usuario en concreto
-    
+    public function registerUser($user, $email ,$password){
+        $database = new DataBase(); //Ponen los datos de la base de datos
+        $database->executeQuery("Consulta");
+
+        //Resultado de la consulta se tiene que retornar
+    }
 }
