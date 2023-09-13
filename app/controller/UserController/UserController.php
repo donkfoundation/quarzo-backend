@@ -11,11 +11,11 @@ class UserController{
         $this->modelUser = new User();
         $userObject = $this->modelUser;
 
-        $user = '"camilo_nuevo"';
+        $username = '"camilo_nuevo"';
         $email = '"camilo@email.com"';
         $password = '"11111"';
 
-        $result = $userObject->registerUser($user, $email, $password);
+        $result = $userObject->registerUser($username, $email, $password);
         return $result;
 
         //Tiene que devolver un JSON con un "1"
@@ -26,10 +26,10 @@ class UserController{
         $this->modelUser = new User();
         $userObject = $this->modelUser;
 
-        $user = '"camilo"';
+        $username = '"camilo"';
         $password = '"231231"';
 
-        $result = $userObject->searchUser($user, $password);
+        $result = $userObject->searchUser($username, $password);
 
         if ($result) {
             return $result;
