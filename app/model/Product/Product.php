@@ -60,7 +60,7 @@ class Product {
         return $this->categories;
     }
 
-    public function addCategories(Categories $category) {
+    public function addCategories(Category $category) {
         $this->categories[] = $category;
     }
 
@@ -72,7 +72,7 @@ class Product {
         return $this->tags;
     }
 
-    public function addTags(Tags $tag) {
+    public function addTags(Tag $tag) {
         $this->tags[] = $tag;
     }
 
